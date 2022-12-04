@@ -77,7 +77,7 @@ const votes=async (req,res)=>{
 const IncreseViewCount =async (req,res)=>{
     const id = req.params.videoId;
     const video = await service.getVideo(id);
-    console.log(id);
+ 
     if(!video)
     {
         res.status(404).send({code:404,message:"No video found with matching id"});
@@ -85,7 +85,7 @@ const IncreseViewCount =async (req,res)=>{
     }
     video.viewCount= video.viewCount + 1 ;
     await video.save();
-    console.log(video);
+    
     res.status(200).send({videos:video});
 }
 
