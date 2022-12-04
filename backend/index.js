@@ -1,7 +1,7 @@
 const mongoose= require("mongoose");
 const app = require("./app");
 
-let server=config.port;
+let server=8082;
 
 mongoose.connect("mongodb+srv://Gourav:Greeshman97010@cluster0.yaoxdnm.mongodb.net/Xflix",
                 { useNewUrlParser: true },
