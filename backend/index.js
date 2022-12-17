@@ -3,9 +3,6 @@ const app = require("./app");
 
 let server=8082;
 
-mongoose.connect("mongodb+srv://Gourav:Greeshman97010@cluster0.yaoxdnm.mongodb.net/Xflix",
-                { useNewUrlParser: true },
-                ()=>{console.log("connected to mongodb")},
-                e=>{console.error(e)});
+mongoose.connect();
                 
 app.listen(server,()=>console.log("Listening at port ",server));
